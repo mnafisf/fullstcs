@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                <div class="logo">
+                    <img alt="Logo" src="https://storage.googleapis.com/a1aa/image/w2gEsxaZJFbBAZ6K9IIomHhWfVtM8jz0qKeEBEwwcWLYfecOB.jpg" width="40" height="40"/>
+                    <span>Acedesign</span>
+                </div>
+                <ul class="menu">
+                    <h2>Main Menu</h2>
+                    <li><a href="#"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#"><i class="fas fa-box"></i> Orders</a></li>
+                    <li><a href="#"><i class="fas fa-tag"></i> Products</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <h2>Analytics</h2>
+                    <li><a href="#"><i class="fas fa-ship"></i> Shipment</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Employee</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <p>ACEDESIGN 2022</p>
+                <p>Platform for solution of all types of business to be more advanced.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for product"/>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-pen"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="left-content">
+                    <div class="overview">
+                        <div class="card">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="value">$27,340.00</div>
+                            <div class="label">Total Sales</div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div class="value">$7,340.00</div>
+                            <div class="label">Total Expenses</div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-users"></i>
+                            <div class="value">18,340.00</div>
+                            <div class="label">Total Visitors</div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-box"></i>
+                            <div class="value">11,340.00</div>
+                            <div class="label">Total Orders</div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h3>Income</h3>
+                        <canvas id="incomeChart"></canvas>
+                    </div>
+                    <div class="popular-products">
+                        <h3>Popular Products</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Photos</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Brand</th>
+                                    <th>Price</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img alt="Iphone 13" src="https://storage.googleapis.com/a1aa/image/4WeFJeB5HzrcO00zMfrTToxJLoHENZSUslkdvCe9xzvC99cOB.jpg" width="40" height="40"/></td>
+                                    <td>Iphone 13</td>
+                                    <td>Apr 12, 2022</td>
+                                    <td>Technic</td>
+                                    <td>Apple</td>
+                                    <td>$99.89</td>
+                                    <td>Available</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Macbook 14" src="https://storage.googleapis.com/a1aa/image/OamZVw3rMD4PFFgejqJxf7J0EfJu8idcYYmWfGcVOueu675cC.jpg" width="40" height="40"/></td>
+                                    <td>Macbook 14</td>
+                                    <td>Apr 12, 2022</td>
+                                    <td>Technic</td>
+                                    <td>Apple</td>
+                                    <td>$99.89</td>
+                                    <td>Available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div>
+                        <div class="profile">
+                            <img alt="Profile Picture" src="https://storage.googleapis.com/a1aa/image/0TFfYhg3mGwTbqzwNgL8cfooxapVGhkTENEVhmGk7OaXfecOB.jpg" width="50" height="50"/>
+                            <div class="info">
+                                <div class="name">ACEDESIGN</div>
+                                <div class="stats">
+                                    <div class="stat">218 Products</div>
+                                    <div class="stat">2,580 Followers</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reputation">
+                            <h3>Reputation</h3>
+                            <div>Start Seller</div>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img alt="Watch 4x" src="https://storage.googleapis.com/a1aa/image/lOpzOcNCQfzSMar9rdjsy8wdM0qi3uXu1LtRb3Xw7hRqvnzJA.jpg" width="40" height="40"/></td>
+                                    <td>Watch 4x</td>
+                                    <td>2 Minutes Ago</td>
+                                    <td>+$1280.00</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Macbook 4x" src="https://storage.googleapis.com/a1aa/image/fQawmeE3bchkJ0I7Jfsc6Yw1HHWdm9IeJK8xrttq6idI99cOB.jpg" width="40" height="40"/></td>
+                                    <td>Macbook 4x</td>
+                                    <td>2 Minutes Ago</td>
+                                    <td>+$8080.00</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Iphone13 4x" src="https://storage.googleapis.com/a1aa/image/zm9IHaZ5Qewxa6TbZyeNhE8sHfzLe9B721efbnXSBaJk23z5E.jpg" width="40" height="40"/></td>
+                                    <td>Iphone13 4x</td>
+                                    <td>2 Minutes Ago</td>
+                                    <td>+$5680.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
